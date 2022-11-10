@@ -17,11 +17,6 @@ def pizzas_list(html):
     for info in title_price:
         title = info.find("div", class_="title_3uNTc").text.strip()
         price = info.find("div", class_="price_1_Tty").text.strip()
-        tit_price_dict = {title}, {price}
-        return tit_price_dict
-
-        print(())
-
-
+        print(f'{title} - {price}')
 my_html = get_response('https://3332222.ru/menu/picca/')
 print(pizzas_list(my_html))

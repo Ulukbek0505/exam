@@ -17,6 +17,9 @@ def pizza_mafia(html):
     for info in title_price:
         title = info.find("div", class_="title_3uNTc").text.strip()
         price = info.find("div", class_="price_1_Tty").text.strip()
+        if title == 'Петровская 25 см (толстое с сыром)':
+            break
+
         print(f'{title} - {price}')
 
 def pizza30cm(html):
@@ -26,6 +29,8 @@ def pizza30cm(html):
     for info in in_title_price:
         title = info.find("h2", class_="uk-h4 uk-margin-small-bottom woocommerce-loop-product__title").text.strip()
         price = info.find("span", class_="woocommerce-Price-amount amount").text.strip()
+        if title =='Ранч':
+            break
         print(f'{title} - {price}')
 
 

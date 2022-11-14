@@ -3,10 +3,8 @@ from parser import pizza_mafia, pizza30cm, my_html, my_html1
 from confiq import TOKEN
 import telebot
 from telebot.types import (
-    KeyboardButton,
     InlineKeyboardMarkup,
     InlineKeyboardButton,
-    ReplyKeyboardMarkup,
 )
 
 bot = telebot.TeleBot(token=TOKEN)
@@ -43,7 +41,7 @@ def pizzamafia(call):
 @bot.callback_query_handler(func= lambda call: call.data=="contacts")
 def contacts(call):
     message = call.message
-    text = 'https://3332222.ru/menu/picca/\n 812 333-22-22'
+    text = 'https://3332222.ru/menu/picca/\n +7 812 333-22-22'
     bot.send_message(message.chat.id, text=text, reply_markup=None)
 
 @bot.callback_query_handler(func=lambda call: call.data == "link2")
